@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FB V Twitter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/1c8d865763.js"></script>
+  <script src="./assets/script/count.js"></script>
+</head>
+<body onload="initialize()">
+    <div class="jumbotron text-center">
+        <h1 class="heading">Facebook vs Twitter</h1>
+        <p>This page counts the number of times the user presses the button.</p>
+    </div>
+    <div class="container text-center">
+        <div class="row block">
+            <div class="col-sm-12 col-lg-4">
+                <span class="fab fa-facebook-square fb">Facebook</span>
+            </div>
+            <div class="col-sm-12 col-lg-4 vote-button">
+                <button class="btn btn-primary count-button" onclick="vote()">Vote</button>
+            </div>
+            <div class="col-sm-12 col-lg-4 count">
+                <span class="displayCount">Count:0</span>
+            </div>
+        </div>
+        <div class="row block">
+            <div class="col-sm-12 col-lg-4">
+                <span class="fab fa-twitter-square twtr">Twitter</span>
+            </div>
+            <div class="col-sm-12 col-lg-4 vote-button">
+                <button class="btn btn-primary count-button" onclick="vote1()">Vote</button>
+            </div>
+            <div class="col-sm-12 col-lg-4 count">
+                <span class="displayCount">Count:0</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 justify-content-center">
+                <button class="btn btn-primary reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

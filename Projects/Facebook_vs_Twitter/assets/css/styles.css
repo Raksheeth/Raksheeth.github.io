@@ -1,0 +1,39 @@
+.heading{
+    background: -webkit-gradient( linear, left top, right top,color-stop(0.1, #2ff),color-stop(0.5, #22f), color-stop(0.7, #2ff));
+    background: -moz-gradient( linear, left top, right top,color-stop(0.1, #2ff),color-stop(0.5, #22f), color-stop(0.7, #2ff));
+    background: -ms-gradient( linear, left top, right top,color-stop(0.1, #2ff),color-stop(0.5, #22f), color-stop(0.7, #2ff));
+    color:transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+}
+.fb{
+    color:rgb(58, 58, 219);
+    font-size: 50px;
+}
+.twtr{
+    color:rgb(73, 178, 219);
+    font-size: 50px;
+}
+.vote-button{
+    padding-top: 10px; 
+}
+.count{
+    font-size: 50px;
+}
+.reset{
+    background-color: rgb(77, 75, 75);
+    border: rgb(77, 75, 75);
+}
+.reset:hover{
+    background-color: rgb(53, 48, 48);
+}
+@media only screen and (max-width: 992px){
+    .block{
+        border:2px solid #b4b7b9;
+        border-radius: 10px; 
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+}

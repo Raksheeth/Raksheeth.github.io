@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./assets/css/styles.css"/>
+        <script src="https://kit.fontawesome.com/1c8d865763.js"></script>
+    </head>
+    <body onkeyup="keyboard()">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-4 col-md-3">
+                    <!--Used to bring the caculator to the center-->
+                </div>
+                <div class="calculator col-sm-12 col-lg-4 col-md-6">
+                    <div class="bg-dark text-light head-design">
+                        <h3><i>Calculator</i></h3>
+                    </div>
+                        <input type="text" class="form-control display text-right" readonly/>
+                        <div class="d-flex justify-content-around">
+                            <button class="btn btn-success" onclick="on()">AC</button>
+                            <button class="btn btn-danger" onclick="off()">Off</button>
+                            <button class="btn btn-warning" onclick="clr()"><-</button>
+                            <button class="btn btn-dark calculator-icon" disabled><span class="fas fa-calculator"></span></button>
+                        </div>    
+                        <div class="d-flex justify-content-around">
+                            <button class="btn btn-dark" value="7" onclick="input(this.value)">7</button>
+                            <button class="btn btn-dark" value="8" onclick="input(this.value)">8</button>
+                            <button class="btn btn-dark" value="9" onclick="input(this.value)">9</button>
+                            <button class="btn btn-primary" value="/" onclick="input(this.value)">/</button>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <button class="btn btn-dark" value="4" onclick="input(this.value)">4</button>
+                            <button class="btn btn-dark" value="5" onclick="input(this.value)">5</button>
+                            <button class="btn btn-dark" value="6" onclick="input(this.value)">6</button>
+                            <button class="btn btn-primary" value="*" onclick="input(this.value)">X</button>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <button class="btn btn-dark" value="1" onclick="input(this.value)">1</button>
+                            <button class="btn btn-dark" value="2" onclick="input(this.value)">2</button>
+                            <button class="btn btn-dark" value="3" onclick="input(this.value)">3</button>
+                            <button class="btn btn-primary" value="+" onclick="input(this.value)">+</button>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <button class="btn btn-primary" value="." onclick="input(this.value)">.</button>
+                            <button class="btn btn-dark" value="0" onclick="input(this.value)">0</button>
+                            <button class="btn btn-primary" onclick="output()">=</button>
+                            <button class="btn btn-primary" value="-" onclick="input(this.value)">-</button>
+                        </div>
+                    <div class="bg-dark text-light foot-design">
+                        <i>Raksavage</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="./assets/script/app.js"></script>
+    </body>
+</html>

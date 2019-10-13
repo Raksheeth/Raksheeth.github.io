@@ -1,0 +1,27 @@
+.calculator{
+    margin-top:5vh;
+    padding:0px;
+    background-color: #000000af;
+    border-radius: 20px;
+}
+.head-design{
+    padding: 5px 0px;
+    border-radius: 10px 10px 5px 5px; 
+}
+.display{
+    height: 50px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+button{
+    height: 60px;
+    width:60px;
+    margin: 5px;
+}
+.calculator-icon{
+    font-size: 30px;
+}
+.foot-design{
+    padding: 5px 0px;
+    border-radius: 5px 5px 10px 10px; 
+}
