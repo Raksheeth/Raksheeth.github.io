@@ -19,8 +19,8 @@ body{
 .round:hover{
 		height:270px;
 		width:270px;
-		transform: rotateZ(360deg);
-		transition-duration: 2s;
+		transform:rotateY(360deg);
+		transition-duration: 5s;
 		border-radius: 80%;						
 		border: 2px solid #fff;
 	}

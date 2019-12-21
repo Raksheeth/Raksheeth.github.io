@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Question Sets</title>
+        <script src="https://kit.fontawesome.com/1c8d865763.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./assets/css/styles.css"/>
+    </head>
+    <body>
+        <!-- Top-navbar Start -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- <a class="navbar-brand" data-toggle="tab" href="#welcome">QS</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="nav navbar-nav" role="tablist">
+                <li class="nav-item">
+                    <a class="navbar-brand" data-toggle="tab" href="#welcome">QS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#create">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#view">View</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#about">About</a>
+                </li>    
+                </ul>
+            </div>  
+        </nav>
+        <!-- Top-navbar End-->
+        <!-- tab-contents -->
+        <div class="tab-content">
+            <!-- Welcome Page -->
+            <div id="welcome" class="text-center welcome tab-pane active">
+                <span class="text1">Welcome to</span>
+                <span class="text2">Question Set Creator</span>
+            </div>
+            <!--create-->
+            <div id="create" class="container tab-pane fade creation-card">
+                <div class="mx-auto card w-50 text-center bg-dark text-light">
+                    <div class="card-header bg-dark">
+                        <h4 class="card-title">Question set Creation</h4>
+                    </div>
+                    <br/>
+                    <span class="far fa-list-alt" style="font-size:75px;"></span>
+                    <div class="card-body">
+                      <p class="card-text">Build your question Set here</p>
+                      <a href="./templates/questionCreation.html" target="_blank" class="btn btn-primary stretched-link">Create</a>
+                    </div>
+                  </div>
+            </div>
+            <!-- about -->
+            <div id="about" class="container text-center tab-pane fade">
+                <h1>This is a Computerized Question Set creator.</h1>
+                <h3><u>To create a Question set follow the steps:</u></h3>
+                <br/>
+                <h5>Step 1:Go to create.</h5>
+                <h5>Step 2:Click anywhere on the question set card.</h5>
+                <h5>Step 3:Create a question set of your choice.</h5>
+            </div>
+            <!-- view -->
+            <div id="view" class="container tab-pane fade">
+                <h1>List of Question Sets created</h1>
+            </div>
+        </div>            
+    </body>
+</html>
