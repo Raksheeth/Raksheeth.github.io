@@ -18,13 +18,18 @@ body{
     margin-bottom: 20px;
     background: rgb(6, 24, 24) ;
     position: relative;
-    animation: ani 2s;
+    animation: ani1 2s;
 }
 .text2{
     font-size: 30px;
+    margin-bottom: 20px;
+    background: rgb(6, 24, 24) ;
     color: #6ab04c;
 }
-@keyframes ani{
+.text3{
+    animation: ani1 2s;
+}
+@keyframes ani1{
     0%{
         color: black;
         margin-bottom: -40px;
