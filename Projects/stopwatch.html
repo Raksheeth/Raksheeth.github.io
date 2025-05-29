@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet"> 
+    <title>Stopwatch</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+            overflow: hidden;
+            background-color: #E7EFC7;
+            font-family: "Tektur", sans-serif;
+        }
+        .circle{
+            border-radius: 50%;
+            height: 750px;
+            width: 750px;
+            display: grid;
+            place-items: center;
+            background-color: #AEC8A4;
+        }
+        .stopwatch{
+            display: flex;
+            justify-content: space-between;
+            font-size: 100px;
+            font-variant-numeric: tabular-nums;
+        }
+        .buttons{
+            text-align: center;
+        }
+        .buttons button{
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: none;
+            background-color: #8A784E;
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+        .buttons button:hover{
+            background-color: #3B3B1A;
+            cursor: pointer;
+        }
+        .stopwatch span {
+            display: inline-block;
+            width: 1.2em;
+            text-align: center;
+        }
+        #start-button:disabled{
+            background-color: gray;
+            cursor: default;
+        }
+        .load-animation-container{
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 600px;
+            border: 3px solid #3B3B1A;
+            margin-top: 30px;
+        }
+        #load-animation{
+            background-color: #8A784E;
+            height: 40px;
+        }
+        #load-animation.paused {
+            animation-play-state: paused;
+        }
+        .move{
+            animation: load 60s linear infinite;
+            transition: ease-in;
+        }
+        @keyframes load {
+            0%{width: 0%;}
+            /* 25%{width: 25%;}
+            50%{width: 50%;}
+            75%{width: 75%;} */
+            100%{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div>
+            <div class="stopwatch">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+                <span>:</span>
+                <span id="milliseconds">00</span>
+            </div>
+            <div class="buttons">
+                <button onclick="startTimer()" id="start-button">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; align-items: end;">
+        <div class="load-animation-container">
+            <div id="load-animation"></div>
+        </div>
+        <span style="font-size: 40px;margin-left: 20px;display: inline-block;width: 1.2em;" id="load-percent">00%</span>
+    </div>
+
+    <script>
+        let minutes = 0;
+        let seconds = 0;
+        let milliseconds = 0;
+        var timer;
+        let startButton = document.getElementById("start-button");
+
+        function startTimer(){
+            // clearInterval(timer);
+            timer =  setInterval(runTimer,10);
+            const box = document.getElementById("load-animation");
+            box.classList.add("move");
+            document.getElementById("load-animation").classList.remove("paused");
+            startButton.disabled = true;
+        }
+
+        function runTimer(){
+            milliseconds++; 
+    
+            if(milliseconds > 99){
+                milliseconds = 0;
+                seconds++;
+            }
+            if(seconds > 59){
+                seconds = 0;
+                minutes++;
+            }
+            console.log(milliseconds)
+
+            document.getElementById("milliseconds").innerHTML = "0" + milliseconds; 
+            if(milliseconds > 9){
+                document.getElementById("milliseconds").innerHTML = milliseconds; 
+            }
+            document.getElementById("seconds").innerHTML = "0" + seconds;
+            document.getElementById("load-percent").innerHTML = parseInt((seconds/60)*100) < 9 ? "0" + parseInt((seconds/60)*100) + "%": parseInt((seconds/60)*100) + "%";
+            if(seconds > 9){
+                document.getElementById("seconds").innerHTML = seconds;
+            }
+            document.getElementById("minutes").innerHTML = "0" + minutes;
+            if(minutes > 9){
+                document.getElementById("minutes").innerHTML = minutes;
+            }
+        }
+
+        function stopTimer(){
+            startButton.disabled = false;
+            document.getElementById("load-animation").classList.add("paused");
+            clearInterval(timer);
+        }
+
+        function resetTimer(){
+            clearInterval(timer);
+            document.getElementById("milliseconds").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("load-percent").innerHTML = "00%";
+            milliseconds = 0;
+            seconds = 0;
+            minutes = 0;
+            const box = document.getElementById("load-animation");
+            box.classList.remove("move");
+            startButton.disabled = false;
+        }
+    </script>
+</body>
+</html>
