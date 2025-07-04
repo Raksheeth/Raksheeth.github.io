@@ -1,0 +1,84 @@
+body{
+    display:flex ;
+    flex-direction: column;
+    align-items:center ;
+    padding-top: 5rem;
+    background-color: rgb(59, 59, 59);
+    font-family: monospace;
+    color: white;
+}
+.delete-button{
+    background-color: red;
+}
+table{
+    border-collapse: collapse ;
+}
+td{
+    padding: 0.5rem;
+}
+h2{
+    font-size: 3rem;
+}
+.row-list{
+    background-color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgb(59, 59, 59);
+}
+.list-item:hover{
+    cursor: pointer;
+    background-color: rgb(35, 35, 35);
+}
+.delete-button{
+    height: 2.4rem;
+    width: 5rem;
+    font-size:large;
+    color: white;
+    background-color: red;
+    border: none;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+    margin-top: 10%;
+}
+.delete-button:hover{
+    cursor: pointer;
+    background-color: rgb(186, 0, 0);
+}
+.delete-button:active{
+    background-color: rgb(125, 0, 0);
+}
+#activity{
+    width: 25rem;
+    height: 2rem;
+    font-size: large;
+    box-sizing: border-box;
+}
+#activity:focus{
+    border: none;
+    outline: 3px solid orange;
+}
+#add-button{
+    height: 2.4rem;
+    width: 5rem;
+    font-size: xx-large;
+    color: white;
+    background-color: rgb(52, 52, 201);
+    border: none;
+    border-bottom: 3px solid black;
+    border-radius: 10px;
+}
+#add-button:hover{
+    cursor: pointer;
+    background-color:rgb(38, 38, 153) ;
+}
+#add-button:active{
+    cursor: pointer;
+    background-color:rgb(38, 38, 153) ;
+    border: none;
+    border-top: 3px solid rgb(59, 59, 59);
+}
+@media (max-width:550px){
+    #activity{
+        width: 100%;
+    }
+}
